@@ -10,7 +10,7 @@ namespace EventMaker.Model
     class EventCatalogSingleton
     {
 
-    public ObservableCollection<Event> _events { get; set; }
+        public ObservableCollection<Event> _events { get; set; }
 
         private static EventCatalogSingleton _Instance;
 
@@ -22,15 +22,13 @@ namespace EventMaker.Model
             _events.Add(new Event(2, "Jazz Festival", "A lot of jazz music", "Copenhagen", new DateTime(2020, 8, 7, 13, 0, 0)));
         }
 
-    public static EventCatalogSingleton Instance
+        public static EventCatalogSingleton Instance
         {
             get
             {
-                if (_Instance != null)
-                    return _Instance;
-                else return new EventCatalogSingleton();
+                return _Instance ?? (_Instance = new EventCatalogSingleton());
             }
-        }
 
+        }
     }
 }

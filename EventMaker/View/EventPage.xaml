@@ -3,12 +3,37 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:EventMaker.View"
+    xmlns:mv="using:EventMaker.ViewModel"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <!--<Page.DataContext>
+        <mv:EventViewModel></mv:EventViewModel>
+    </Page.DataContext>-->
+
+
     <Grid>
 
+        <!--<ListView ItemsSource="{Binding catalogSingelton._events}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Height="54" Width="502">
+                            <TextBlock Text="ID = "></TextBlock>
+                            <TextBlock Text="{Binding Id}" Width="133"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Height="66">
+                        <TextBlock Text="Name ="></TextBlock>
+                        <TextBlock Text="{Binding Name}" Width="106"/>
+                    </StackPanel>
+                    </DataTemplate>
+            </ListView.ItemTemplate>
+            
+        </ListView>-->
+        
     </Grid>
 </Page>
