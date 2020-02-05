@@ -1,0 +1,73 @@
+﻿<Page
+    x:Class="EventMaker.View.CreateEventPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EventMaker.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ViewModel="using:EventMaker.ViewModel"
+    mc:Ignorable="d"
+    
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.DataContext>
+        <ViewModel:EventViewModel/>
+    </Page.DataContext>
+    
+    <Grid Background="#FFEEEEEE">
+       
+        <StackPanel Margin="375,0,375,-53" Grid.Row="1" Height="990" VerticalAlignment="Bottom" Background="#FFEEEEEE">
+            <TextBlock Text="Add Event" TextWrapping="Wrap" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" Height="51" Width="351"/>
+
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="ID" TextWrapping="Wrap" Width="80" Height="43" SelectionChanged="TextBlock_SelectionChanged" FontSize="18"/>
+                <TextBox Width="386" Height="37" RenderTransformOrigin="0.5,0.5" BorderBrush="#66C0C0C0" Background="White" BorderThickness="1,1,1,1" Text="{Binding Id ,Mode=TwoWay}">
+                    <TextBox.RenderTransform>
+                        <CompositeTransform SkewY="0.074" TranslateY="-0.249"/>
+                    </TextBox.RenderTransform>
+                </TextBox>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Name" TextWrapping="Wrap" Width="80" Height="43" FontSize="18"/>
+                <TextBox Width="386" Height="37"  RenderTransformOrigin="0.5,0.5" BorderBrush="#66C0C0C0" Background="White" BorderThickness="1,1,1,1" Text="{Binding Name,Mode=TwoWay}" >
+                    <TextBox.RenderTransform>
+                        <CompositeTransform SkewY="0.074" TranslateY="-0.249"/>
+                    </TextBox.RenderTransform>
+                </TextBox>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Description" TextWrapping="Wrap" Width="80" Height="43" FontSize="15"/>
+                <TextBox Width="386" Height="37"  RenderTransformOrigin="0.5,0.5" BorderBrush="#66C0C0C0" Background="White" BorderThickness="1,1,1,1" Text="{Binding Description,Mode=TwoWay}" >
+                    <TextBox.RenderTransform>
+                        <CompositeTransform SkewY="0.074" TranslateY="-0.249"/>
+                    </TextBox.RenderTransform>
+                </TextBox>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Place" TextWrapping="Wrap" Width="80" Height="43"/>
+                <TextBox Width="386" Height="37"  RenderTransformOrigin="0.5,0.5"  BorderBrush="#66C0C0C0" Background="White" BorderThickness="1,1,1,1" Text="{Binding Place,Mode=TwoWay}">
+                    <TextBox.RenderTransform>
+                        <CompositeTransform SkewY="0.074" TranslateY="-0.249"/>
+                    </TextBox.RenderTransform>
+                </TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Date" TextWrapping="Wrap" Width="80" Height="38"/>
+                <DatePicker Date="{Binding Date}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Time" TextWrapping="Wrap" Width="80" Height="43"/>
+                <TimePicker Time="{Binding Time}"/>
+            </StackPanel>
+            <Button Content="Add" Width="106" Click="Button_Click" Foreground="White" BorderBrush="Transparent" FocusVisualPrimaryBrush="#00000000" Background="#FF77A088"/>
+
+        </StackPanel>
+    </Grid>
+</Page>

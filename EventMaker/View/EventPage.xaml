@@ -9,14 +9,14 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <!--<Page.DataContext>
+    <Page.DataContext>
         <mv:EventViewModel></mv:EventViewModel>
-    </Page.DataContext>-->
+    </Page.DataContext>
 
 
     <Grid>
 
-        <!--<ListView ItemsSource="{Binding catalogSingelton._events}">
+        <ListView ItemsSource="{Binding catalogSingelton._events}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -24,16 +24,27 @@
                             <TextBlock Text="ID = "></TextBlock>
                             <TextBlock Text="{Binding Id}" Width="133"/>
                         </StackPanel>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" Height="66">
+                        <StackPanel Orientation="Horizontal" Height="66">
                         <TextBlock Text="Name ="></TextBlock>
                         <TextBlock Text="{Binding Name}" Width="106"/>
                     </StackPanel>
-                    </DataTemplate>
+                        <StackPanel Orientation="Horizontal" Height="66">
+                            <TextBlock Text="Place ="></TextBlock>
+                            <TextBlock Text="{Binding Place}" Width="106"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Height="66">
+                            <TextBlock Text="Description ="></TextBlock>
+                            <TextBlock Text="{Binding Description}" Width="300"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Height="66">
+                            <TextBlock Text="DateTime ="></TextBlock>
+                            <TextBlock Text="{Binding DateTime}" Width="106"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
             </ListView.ItemTemplate>
             
-        </ListView>-->
+        </ListView>
         
     </Grid>
 </Page>
