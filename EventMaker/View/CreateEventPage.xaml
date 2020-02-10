@@ -9,7 +9,7 @@
     mc:Ignorable="d"
     
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+ 
     <Page.DataContext>
         <ViewModel:EventViewModel/>
     </Page.DataContext>
@@ -66,7 +66,7 @@
                 <TextBlock Text="Time" TextWrapping="Wrap" Width="80" Height="43"/>
                 <TimePicker Time="{Binding Time}"/>
             </StackPanel>
-            <Button Content="Add" Width="106" Click="Button_Click" Foreground="White" BorderBrush="Transparent" FocusVisualPrimaryBrush="#00000000" Background="#FF77A088"/>
+            <AppBarButton Command="{Binding CreateEventCommand}" Icon="Add" Label="AddEvent" Width="106" Click="Button_Click" Foreground="White" BorderBrush="Transparent" FocusVisualPrimaryBrush="#00000000" Background="#FF77A088"/>
 
         </StackPanel>
     </Grid>

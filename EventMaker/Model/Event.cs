@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EventMaker.Model
 {
-    class Event
+    class Event 
     {
         private int _id;
         private string _name;

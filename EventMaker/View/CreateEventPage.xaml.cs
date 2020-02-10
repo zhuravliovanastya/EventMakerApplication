@@ -29,7 +29,7 @@ namespace EventMaker.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(EventPage));
         }
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
