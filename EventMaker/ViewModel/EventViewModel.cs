@@ -17,7 +17,7 @@ namespace EventMaker.ViewModel
         private DateTimeOffset _date;
         private TimeSpan _time;
         private ICommand _createEventCommand;
-        private Relaycommand._instance
+        private EventCatalogSingleton _instance;
 
         public Handler.EventHandler EventHandler { get; set; }
 

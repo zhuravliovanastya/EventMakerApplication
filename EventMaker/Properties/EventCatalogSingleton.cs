@@ -32,5 +32,5 @@ namespace EventMaker.Model
             Event.Add(ev);
         }
     }
-    }
+    
 }
