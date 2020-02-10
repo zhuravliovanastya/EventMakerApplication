@@ -16,10 +16,19 @@ namespace EventMaker.ViewModel
         private string _name, _description, _place;
         private DateTimeOffset _date;
         private TimeSpan _time;
+        private ICommand _createEventCommand;
+        private Relaycommand._instance
 
-
+        public Handler.EventHandler EventHandler { get; set; }
 
         public EventCatalogSingleton catalogSingelton { get; set; }
+
+        public ICommand CreateEventCommand
+        {
+            get { return _createEventCommand; }
+            set { _createEventCommand = value; }
+        }
+
 
         public EventViewModel()
         {
@@ -30,10 +39,12 @@ namespace EventMaker.ViewModel
             _place = Place;
             _date = Date;
             _time = Time;
+            _createEventCommand = new RelayCommand(EventHandler.CreateEvent);
             DateTime dt = System.DateTime.Now;
             _date = new DateTimeOffset(dt.Year, dt.Month, dt.Day, 0, 0, 0, 0, new TimeSpan());
             _time = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
-
+            EventHandler = new Handler.EventHandler(this);
+          
 
         }
 

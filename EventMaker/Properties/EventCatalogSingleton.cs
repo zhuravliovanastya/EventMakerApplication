@@ -24,11 +24,13 @@ namespace EventMaker.Model
 
         public static EventCatalogSingleton Instance
         {
-            get
-            {
-                return _Instance ?? (_Instance = new EventCatalogSingleton());
-            }
-
+            get { return _Instance ?? (_Instance = new EventCatalogSingleton()); }
         }
+
+        public void AddEvent(Event ev)
+        {
+            Event.Add(ev);
+        }
+    }
     }
 }
