@@ -13,10 +13,10 @@
     <Page.DataContext>
         <ViewModel:EventViewModel/>
     </Page.DataContext>
-    
+
     <Grid Background="#FFEEEEEE">
-       
-        <StackPanel Margin="375,0,375,-53" Grid.Row="1" Height="990" VerticalAlignment="Bottom" Background="#FFEEEEEE">
+
+        <StackPanel Margin="42,110,708,0" Height="990" VerticalAlignment="Top" Background="#FFEEEEEE">
             <TextBlock Text="Add Event" TextWrapping="Wrap" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" Height="51" Width="351"/>
 
 
